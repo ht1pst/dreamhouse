@@ -5,7 +5,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="flex items-center justify-between bg-white h-20 w-full fixed z-50 px-6 md:px-12 shadow-md">
+    <header className="flex items-center justify-between bg-white h-20 w-full fixed  z-50 px-6 md:px-12 shadow-md">
       {/* Logo */}
       <h1 className="font-semibold text-xl md:text-2xl">DREAMINGHOME</h1>
 

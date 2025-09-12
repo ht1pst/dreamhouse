@@ -5,8 +5,8 @@ import x from '../src/assets/x.png';
 import you from '../src/assets/youtube.webp';
 function Footer(){
     return(
-       <section className="w-full left-0 absolute lg:mt-1530 h-5   mt-1920 ">
-<div className='flex flex-col justify-center gap-20 lg:gap-100 '>
+       <section className="w-full  h-5   mt-10 ">
+<div className='flex flex-col justify-center gap-10 lg:gap-100 '>
     <div className='flex flex-col justify-center gap-3 lg:gap-10 font-semibold'>
         <p className='mx-auto'> ©2025. All rights reserved</p>
         <a className='mx-auto' href="#">PrivacyPolicy</a>

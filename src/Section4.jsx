@@ -1,13 +1,20 @@
-import suit from '../src/assets/suit.jpg';
-import star from '../src/assets/star.webp';
+import { motion } from "framer-motion";
+import suit from "../src/assets/suit.jpg";
+import star from "../src/assets/star.webp";
 
 function Section4() {
   return (
-    <section className="w-full left-0 absolute lg:mt-800 mt-750 h-200 bg-gray-100 ">
-      <div className="px-3">
-        <div className="mt-20">
+    <section className="w-full h-230 bg-gray-100">
+      <div className="px-3 pt-20">
+        <motion.div
+          className="mt-20"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <p className="justify-center flex text-2xl font-semibold">Testimonial</p>
-          <h1 className="mx-auto w-70 text-center text-4xl mt-5 font-semibold">
+          <h1 className="mx-auto w-80 text-center text-4xl mt-5 font-semibold">
             What Our Clients Say
           </h1>
           <p className="mx-auto leading-normal font-semibold text-md lg:w-100 mt-5 text-center">
@@ -15,7 +22,7 @@ function Section4() {
             that fits your needs, making sure you have a great experience every
             step of the way.
           </p>
-        </div>
+        </motion.div>
 
         {/* Horizontal Scroll */}
         <div className="flex flex-row overflow-x-auto no-scrollbar gap-10 mt-10">

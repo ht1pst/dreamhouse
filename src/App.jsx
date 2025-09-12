@@ -1,4 +1,5 @@
-import Header from "./Header"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./Header";
 import Hero from "./Hero";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
@@ -11,18 +12,22 @@ import Footer from "./Footer";
 function App() {
   return (
     <>
-     <Header/>
-     <Hero/>
-     <Section2/>
-     <Section3/>
-     <Section4/>
-     <Section5/>
-     <Section6/>
-     <Section7/>
-       <Footer/>
+      <Header />
+
+      <main className="pt-20">
+        <Hero id="hero" />
+        <Section2 id="section2" />
+         <Section3 id="section3" />
+          <Section4 id="section4" />
+           <Section5 id="section5" />
+             <Section7 id="section7" />
+             <Section6 id="section6" />
+        <Footer id="footer" />
+      </main>
+
     
     </>
-  )
+  );
 }
 
 export default App;

@@ -1,116 +1,173 @@
-import dream2 from '../src/assets/dreaming2.jpg';
-import dream3 from '../src/assets/dreaming3.jpg';
-import dream4 from '../src/assets/dreaming4.jpg';
-function Section2(){
-    return(
-        <section className="left-0 w-full absolute mt-230 bg-gray-100 h-280 px-3">
-<div className="flex flex-col  items-center lg:gap-100 justify-center mt-20">
-    <div>
-         <p className='text-md font-semibold w-50 flex justify-center rounded-full h-10 items-center bg-white'>Featured Properties</p>
-         <h1 className='text-5xl lg:w-100 mt-5 font-semibold'>Discover your dream home</h1>
-    </div>
-    <div>
-        <h1 className='leading-normal font-semibold text-md lg:w-130 mt-10'>Explore an exclusive selection of premium properties,meticulously cruated to provide you with the best in luxury living and prime real estate investment optons, tailored to your needs.</h1>
-    </div>
-</div>
-<div className='flex flex-col gap-5 mt-10' >
-    <div className='flex justify-center px-10'>
-    <button className='w-35 h-10  bg-black text-white mx-auto rounded-full font-semibold shadow-[0_4px_20px_rgba(0,0,0,0.6)]'> All Properties</button>
-    <button className='w-35 h-10  bg-white text-black  mx-auto rounded-full font-semibold shadow-[0_4px_20px_rgba(0,0,0,0.6)] hover:bg-black hover:text-white transition '>Family House</button>
-   </div>
+import { motion } from "framer-motion";
+import dream2 from "../src/assets/dreaming2.jpg";
+import dream3 from "../src/assets/dreaming3.jpg";
+import dream4 from "../src/assets/dreaming4.jpg";
 
-   <div className='flex justify-center px-10'> 
-    <button className='w-35 h-10  bg-white text-black  mx-auto rounded-full font-semibold shadow-[0_4px_20px_rgba(0,0,0,0.6)] hover:bg-black hover:text-white transition'>Villa</button>
-    <button className='w-35 h-10  bg-white text-black  mx-auto rounded-full font-semibold shadow-[0_4px_20px_rgba(0,0,0,0.6)] hover:bg-black hover:text-white transition'>Apartments</button>
-    </div>
+function Section2() {
+  // Animation variants
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 },
+    },
+  };
 
-    <div className='flex justify-center px-10'>
-    <button className='w-35 h-10  bg-white text-black  mx-auto rounded-full font-semibold shadow-[0_4px_20px_rgba(0,0,0,0.6)] hover:bg-black hover:text-white transition'>Mansions</button>
-    <button className='w-35 h-10  bg-white text-black  mx-auto rounded-full font-semibold shadow-[0_4px_20px_rgba(0,0,0,0.6)] hover:bg-black hover:text-white transition'>Green House</button>
-    </div>
-</div>
-<div className="flex flex-row overflow-x-auto no-scrollbar gap-10 mt-25 px-3">
-  {/* Card 1 */}
-  <div className="flex-shrink-0 w-72 mx-auto">
-    <img src={dream2} alt="" className="h-50 w-full object-cover rounded-2xl"/>
-    <h1 className="font-semibold text-xl mt-3">Silver Birch Villa</h1>
-    <p className="text-sm font-semibold text-gray-500 mt-3">Birmingham B12AA, United Kingdom</p>
-    <div className="flex gap-2 text-sm font-semibold text-gray-500 mt-3">
-      <p>4 beds</p>
-      <p>3 bath</p>
-      <p>1,200 sqft</p>
-    </div>
-    <h1 className="text-2xl font-bold mt-3">$850,000</h1>
-  </div>
+  const item = {
+    hidden: { y: 50, opacity: 0 },
+    show: { y: 0, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+  };
 
-  {/* Card 2 */}
-  <div className="flex-shrink-0 w-72">
-    <img src={dream3} alt="" className="h-50 w-full object-cover rounded-2xl"/>
-    <h1 className="font-semibold text-xl mt-3">Maplewood Estate</h1>
-    <p className="text-sm font-semibold text-gray-500 mt-3">London SW1A, United Kingdom</p>
-    <div className="flex gap-2 text-sm font-semibold text-gray-500 mt-3">
-      <p>5 beds</p>
-      <p>4 bath</p>
-      <p>1,800 sqft</p>
-    </div>
-    <h1 className="text-2xl font-bold mt-3">$1,250,000</h1>
-  </div>
+  return (
+    <section className="w-full bg-gray-100 min-h-screen px-3 py-20">
+      {/* Title & Description */}
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.3 }}
+        className="flex flex-col items-center lg:gap-20 justify-center text-center"
+      >
+        <motion.p
+          variants={item}
+          className="text-md font-semibold w-50 flex justify-center rounded-full h-10 items-center bg-white shadow-sm"
+        >
+          Featured Properties
+        </motion.p>
 
-  {/* Card 3 */}
-  <div className="flex-shrink-0 w-72">
-    <img src={dream4} alt="" className="h-50 w-full object-cover rounded-2xl"/>
-    <h1 className="font-semibold text-xl mt-3">Rosewood Mansion</h1>
-    <p className="text-sm font-semibold text-gray-500 mt-3">Manchester M1, United Kingdom</p>
-    <div className="flex gap-2 text-sm font-semibold text-gray-500 mt-3">
-      <p>6 beds</p>
-      <p>5 bath</p>
-      <p>2,500 sqft</p>
-    </div>
-    <h1 className="text-2xl font-bold mt-3">$2,000,000</h1>
-  </div>
+        <motion.h1
+          variants={item}
+          className="text-5xl lg:w-100 mt-5 font-semibold"
+        >
+          Discover your dream home
+        </motion.h1>
 
-  {/* Card 4 */}
-  <div className="flex-shrink-0 w-72">
-    <img src={dream2} alt="" className="h-50 w-full object-cover rounded-2xl"/>
-    <h1 className="font-semibold text-xl mt-3">Cedarwood Retreat</h1>
-    <p className="text-sm font-semibold text-gray-500 mt-3">Liverpool L1, United Kingdom</p>
-    <div className="flex gap-2 text-sm font-semibold text-gray-500 mt-3">
-      <p>3 beds</p>
-      <p>2 bath</p>
-      <p>950 sqft</p>
-    </div>
-    <h1 className="text-2xl font-bold mt-3">$650,000</h1>
-  </div>
+        <motion.p
+          variants={item}
+          className="leading-normal font-semibold text-md lg:w-130 mt-10"
+        >
+          Explore an exclusive selection of premium properties, meticulously
+          curated to provide you with the best in luxury living and prime real
+          estate investment options, tailored to your needs.
+        </motion.p>
+      </motion.div>
 
-  {/* Card 5 */}
-  <div className="flex-shrink-0 w-72">
-    <img src={dream4} alt="" className="h-50 w-full object-cover rounded-2xl"/>
-    <h1 className="font-semibold text-xl mt-3">Willowbrook Residence</h1>
-    <p className="text-sm font-semibold text-gray-500 mt-3">Edinburgh EH1, United Kingdom</p>
-    <div className="flex gap-2 text-sm font-semibold text-gray-500 mt-3">
-      <p>5 beds</p>
-      <p>4 bath</p>
-      <p>1,750 sqft</p>
-    </div>
-    <h1 className="text-2xl font-bold mt-3">$1,100,000</h1>
-  </div>
+      {/* Filter Buttons */}
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.2 }}
+        className="flex flex-col gap-5 mt-10"
+      >
+        <div className="flex justify-center px-5 gap-3 flex-wrap">
+          {["All Properties", "Family House", "Villa", "Apartments", "Mansions", "Green House"].map(
+            (label, i) => (
+              <motion.button
+                key={i}
+                variants={item}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`w-35 h-10 ${
+                  i === 0 ? "bg-black text-white" : "bg-white text-black"
+                } rounded-full font-semibold shadow-[0_4px_20px_rgba(0,0,0,0.6)] hover:bg-black hover:text-white transition`}
+              >
+                {label}
+              </motion.button>
+            )
+          )}
+        </div>
+      </motion.div>
 
-  {/* Card 6 */}
-  <div className="flex-shrink-0 w-72">
-    <img src={dream3} alt="" className="h-50 w-full object-cover rounded-2xl"/>
-    <h1 className="font-semibold text-xl mt-3">Oakwood Manor</h1>
-    <p className="text-sm font-semibold text-gray-500 mt-3">Leeds LS1, United Kingdom</p>
-    <div className="flex gap-2 text-sm font-semibold text-gray-500 mt-3">
-      <p>4 beds</p>
-      <p>3 bath</p>
-      <p>1,400 sqft</p>
-    </div>
-    <h1 className="text-2xl font-bold mt-3">$900,000</h1>
-  </div>
-</div>
-
-
-        </section>
-    )
+      {/* Property Cards */}
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.2 }}
+        className="flex flex-row overflow-x-auto no-scrollbar gap-10 mt-20 px-3"
+      >
+        {[
+          {
+            img: dream2,
+            title: "Silver Birch Villa",
+            loc: "Birmingham B12AA, United Kingdom",
+            beds: "4 beds",
+            bath: "3 bath",
+            size: "1,200 sqft",
+            price: "$850,000",
+          },
+          {
+            img: dream3,
+            title: "Maplewood Estate",
+            loc: "London SW1A, United Kingdom",
+            beds: "5 beds",
+            bath: "4 bath",
+            size: "1,800 sqft",
+            price: "$1,250,000",
+          },
+          {
+            img: dream4,
+            title: "Rosewood Mansion",
+            loc: "Manchester M1, United Kingdom",
+            beds: "6 beds",
+            bath: "5 bath",
+            size: "2,500 sqft",
+            price: "$2,000,000",
+          },
+          {
+            img: dream2,
+            title: "Cedarwood Retreat",
+            loc: "Liverpool L1, United Kingdom",
+            beds: "3 beds",
+            bath: "2 bath",
+            size: "950 sqft",
+            price: "$650,000",
+          },
+          {
+            img: dream4,
+            title: "Willowbrook Residence",
+            loc: "Edinburgh EH1, United Kingdom",
+            beds: "5 beds",
+            bath: "4 bath",
+            size: "1,750 sqft",
+            price: "$1,100,000",
+          },
+          {
+            img: dream3,
+            title: "Oakwood Manor",
+            loc: "Leeds LS1, United Kingdom",
+            beds: "4 beds",
+            bath: "3 bath",
+            size: "1,400 sqft",
+            price: "$900,000",
+          },
+        ].map((card, i) => (
+          <motion.div
+            key={i}
+            variants={item}
+            className="flex-shrink-0 w-72 mx-auto bg-white rounded-2xl shadow-md p-3"
+            whileHover={{ scale: 1.05, rotate: 1 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <img
+              src={card.img}
+              alt={card.title}
+              className="h-50 w-full object-cover rounded-2xl"
+            />
+            <h1 className="font-semibold text-xl mt-3">{card.title}</h1>
+            <p className="text-sm font-semibold text-gray-500 mt-3">{card.loc}</p>
+            <div className="flex gap-2 text-sm font-semibold text-gray-500 mt-3">
+              <p>{card.beds}</p>
+              <p>{card.bath}</p>
+              <p>{card.size}</p>
+            </div>
+            <h1 className="text-2xl font-bold mt-3">{card.price}</h1>
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
+  );
 }
-export default Section2
+
+export default Section2;
