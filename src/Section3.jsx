@@ -7,7 +7,7 @@ function Section3() {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: { staggerChildren: 0.25 },
+      transition: { staggerChildren: 0.25, delayChildren: 0.3 },
     },
   };
 
@@ -63,8 +63,6 @@ function Section3() {
               <motion.div
                 key={i}
                 variants={item}
-                whileInView={{ scale: [0.8, 1], opacity: [0, 1] }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
                 className="bg-gray-100 w-45 h-25 rounded-xl flex flex-col justify-center text-center shadow-sm"
               >
                 <h1 className="font-semibold text-2xl">{stat.value}</h1>
@@ -75,13 +73,7 @@ function Section3() {
         </div>
 
         {/* Right Image */}
-        <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: false, amount: 0.3 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="flex justify-center"
-        >
+        <motion.div variants={item} className="flex justify-center">
           <img
             src={old}
             alt="About DreamingHome"
