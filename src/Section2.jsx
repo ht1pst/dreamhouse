@@ -19,25 +19,27 @@ function Section2() {
   };
 
   return (
-    <section className="w-full bg-gray-100 min-h-screen px-3 py-20">
+    <section id="properties" className="w-full bg-gray-100 min-h-screen px-3 py-20">
       {/* Title & Description */}
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.3 }}
-        className="flex flex-col items-center lg:gap-20 justify-center text-center"
+        className="flex flex-col items-center lg:gap-10 lg:pt-20 justify-center text-center"
       >
+        <div className="justify-start">
         <motion.p
           variants={item}
-          className="text-md font-semibold w-50 flex justify-center rounded-full h-10 items-center bg-white shadow-sm"
+          className="text-md font-semibold w-50 flex justify-center  rounded-full h-10 items-center bg-white shadow-sm"
         >
           Featured Properties
         </motion.p>
-
+        </div>
+<div className="flex flex-col lg:flex-row lg:gap-70">
         <motion.h1
           variants={item}
-          className="text-5xl lg:w-100 mt-5 font-semibold"
+          className="lg:text-6xl text-5xl lg:w-130 mt-5 font-semibold"
         >
           Discover your dream home
         </motion.h1>
@@ -50,6 +52,7 @@ function Section2() {
           curated to provide you with the best in luxury living and prime real
           estate investment options, tailored to your needs.
         </motion.p>
+        </div>
       </motion.div>
 
       {/* Filter Buttons */}
@@ -60,7 +63,7 @@ function Section2() {
         viewport={{ once: false, amount: 0.2 }}
         className="flex flex-col gap-5 mt-10"
       >
-        <div className="flex justify-center px-5 gap-3 flex-wrap">
+        <div className="flex justify-center px-5 gap-3 mt-5 flex-wrap">
           {["All Properties", "Family House", "Villa", "Apartments", "Mansions", "Green House"].map(
             (label, i) => (
               <motion.button

@@ -25,7 +25,7 @@ function Hero() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.3 }}
-        className="flex flex-col lg:flex-row lg:gap-20 justify-center items-center mt-20"
+        className="flex flex-col lg:flex-row lg:gap-30 lg:justify-center lg:items-center mt-20"
       >
         <div>
           <motion.p
@@ -37,7 +37,7 @@ function Hero() {
 
           <motion.h1
             variants={item}
-            className="lg:text-5xl text-4xl lg:w-100 mt-5 font-semibold"
+            className="lg:text-6xl text-4xl lg:w-120 mt-5 md:justify-start font-semibold"
           >
             Find your best home to live in
           </motion.h1>
@@ -76,7 +76,7 @@ function Hero() {
         <motion.img
           src={heroimg}
           alt="dreaming home"
-          className="rounded lg:h-140 h-60 shadow-lg"
+          className="rounded lg:h-140 h-50 shadow-lg md:w-300 md:h-100 "
           whileHover={{ scale: 1.05, rotate: 1 }}
           whileTap={{ scale: 0.98 }}
         />

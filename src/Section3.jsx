@@ -17,13 +17,13 @@ function Section3() {
   };
 
   return (
-    <section className="w-full min-h-screen bg-white px-3 py-20">
+    <section id="about" className="w-full  lg:h-200 bg-white px-3 py-20">
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.3 }}
-        className="flex flex-col lg:flex-row justify-center lg:gap-20 gap-15 mt-10"
+        className="flex flex-col lg:flex-row justify-center items-center lg:gap-20 gap-15 mt-10 lg:pt-20"
       >
         {/* Left Content */}
         <div>
@@ -36,14 +36,14 @@ function Section3() {
 
           <motion.h1
             variants={item}
-            className="lg:text-5xl text-4xl w-70 lg:w-140 mt-5 font-semibold"
+            className="lg:text-5xl md:w-100 text-4xl w-70 lg:w-140 mt-5 font-semibold"
           >
             Custom Real Estate Help For Everyone
           </motion.h1>
 
           <motion.p
             variants={item}
-            className="leading-normal font-semibold text-md lg:w-150 mt-5"
+            className="leading-normal font-semibold text-md lg:w-150 md:w-140 mt-5"
           >
             At DreamingHome, we aim to give our clients smooth real estate
             solutions that fit their individual needs, making sure they have a

@@ -4,8 +4,8 @@ import star from "../src/assets/star.webp";
 
 function Section4() {
   return (
-    <section className="w-full h-230 bg-gray-100">
-      <div className="px-3 pt-20">
+    <section id="testimonial" className="w-full h-230 bg-gray-100">
+      <div className="px-3  pt-10">
         <motion.div
           className="mt-20"
           initial={{ opacity: 0, y: 40 }}
@@ -13,8 +13,9 @@ function Section4() {
           viewport={{ once: false }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <p className="justify-center flex text-2xl font-semibold">Testimonial</p>
-          <h1 className="mx-auto w-80 text-center text-4xl mt-5 font-semibold">
+          <p  className="text-md font-semibold w-50 flex justify-center mx-auto  rounded-full h-10 items-center bg-white shadow-sm">Testimonial</p>
+          <div className="flex flex-col lg:flex-row mt-10 lg:gap-60">
+          <h1 className="mx-auto w-80 text-center text-4xl lg:text-5xl lg:w-120 mt-5 font-semibold">
             What Our Clients Say
           </h1>
           <p className="mx-auto leading-normal font-semibold text-md lg:w-100 mt-5 text-center">
@@ -22,6 +23,7 @@ function Section4() {
             that fits your needs, making sure you have a great experience every
             step of the way.
           </p>
+          </div>
         </motion.div>
 
         {/* Horizontal Scroll */}

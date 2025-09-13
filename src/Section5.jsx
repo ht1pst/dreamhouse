@@ -6,8 +6,8 @@ import dream4 from "../src/assets/dreaming9.jpeg";
 
 function Section5() {
   return (
-    <section className="w-full bg-gray-100 h-590">
-      <div className="px-5 mt-20 pt-20">
+    <section id="blog" className="w-full bg-white h-590 md:h-320 lg:h-230">
+      <div className="px-5 mt-20 pt-20 lg:pt-40">
         {/* Animated heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -20,7 +20,7 @@ function Section5() {
         </motion.div>
 
         {/* Blog cards (static, untouched) */}
-        <div className="mt-10 flex flex-col justify-center lg:gap-15 gap-10">
+        <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 lg:flex-row justify-center lg:gap-15 gap-10">
           <div className="mx-auto">
             <img src={dream1} alt="" className="w-70 h-90 rounded" />
             <p className="text-gray-400 mt-3">Jan 15, 2025</p>

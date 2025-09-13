@@ -5,9 +5,9 @@ import x from '../src/assets/x.png';
 import you from '../src/assets/youtube.webp';
 function Footer(){
     return(
-       <section className="w-full  h-5   mt-10 ">
-<div className='flex flex-col justify-center gap-10 lg:gap-100 '>
-    <div className='flex flex-col justify-center gap-3 lg:gap-10 font-semibold'>
+       <section className="w-full  h-5 bg-gray-100 lg:h-20 md:h-50  mt-10 ">
+<div className='flex flex-col lg:flex-row justify-center gap-10 lg:gap-100 pt-10'>
+    <div className='flex flex-col md:flex-row lg:flex-row justify-center gap-3 lg:gap-10 font-semibold'>
         <p className='mx-auto'> ©2025. All rights reserved</p>
         <a className='mx-auto' href="#">PrivacyPolicy</a>
          <a className='mx-auto' href="#">Terms of Service</a>
